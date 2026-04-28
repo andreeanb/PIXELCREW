@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "titulo": "Tendencias de Diseño Web para 2025",
+    "categoria": "Tendencias",
+    "fecha": "2025-03-15",
+    "resumen": "Exploramos las tendencias más disruptivas que marcarán el diseño web este año: desde interfaces inmersivas hasta la integración de IA generativa en el proceso creativo.",
+    "imagen": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80",
+    "autor": "Sara Molina"
+  },
+  {
+    "id": 2,
+    "titulo": "Cómo la IA está transformando el proceso creativo",
+    "categoria": "Tecnología",
+    "fecha": "2025-03-08",
+    "resumen": "La inteligencia artificial ya no es solo una herramienta auxiliar. Analizamos cómo los equipos de diseño están integrando modelos generativos para acelerar la producción sin sacrificar creatividad.",
+    "imagen": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80",
+    "autor": "David Ruiz"
+  },
+  {
+    "id": 3,
+    "titulo": "Motion Design: el lenguaje invisible de las marcas",
+    "categoria": "Diseño",
+    "fecha": "2025-02-28",
+    "resumen": "El movimiento es parte de la identidad. Profundizamos en cómo el motion design construye percepciones de marca y mejora la experiencia de usuario en entornos digitales.",
+    "imagen": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&q=80",
+    "autor": "Ana Torres"
+  },
+  {
+    "id": 4,
+    "titulo": "Accesibilidad Web: Diseñar para todos",
+    "categoria": "UX",
+    "fecha": "2025-02-20",
+    "resumen": "Un sitio accesible no solo cumple normativas, es un sitio mejor. Repasamos las claves del diseño inclusivo y por qué debería ser el punto de partida de cualquier proyecto.",
+    "imagen": "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&q=80",
+    "autor": "Carlos Pérez"
+  },
+  {
+    "id": 5,
+    "titulo": "Case Study: Rediseño de marca para TechStartup",
+    "categoria": "Proyectos",
+    "fecha": "2025-02-10",
+    "resumen": "Compartimos el proceso completo detrás de uno de nuestros proyectos más ambiciosos: el rediseño integral de identidad y plataforma digital para una startup tecnológica.",
+    "imagen": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80",
+    "autor": "Sara Molina"
+  },
+  {
+    "id": 6,
+    "titulo": "Performance Web: velocidad como factor de diseño",
+    "categoria": "Tecnología",
+    "fecha": "2025-01-30",
+    "resumen": "La velocidad de carga no es solo un problema técnico, es una decisión de diseño. Exploramos cómo optimizar el rendimiento sin comprometer la estética.",
+    "imagen": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
+    "autor": "David Ruiz"
+  }
+]

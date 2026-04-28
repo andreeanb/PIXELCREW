@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solicita un presupuesto personalizado a PIXELCREW - Agencia de Diseño Web.">
+  <title>Presupuesto | PIXELCREW</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/presupuesto.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="../index.html" class="navbar__logo" aria-label="PIXELCREW Inicio">PIXEL<span>CREW</span></a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar__nav" id="navMenu">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- CABECERA -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="section-label">Trabaja con nosotros</p>
+        <h1 class="page-hero__title" id="page-title">Solicitar<br><span>Presupuesto</span></h1>
+        <p class="page-hero__sub">Cuéntanos tu proyecto y recibirás una propuesta adaptada a tus necesidades.</p>
+      </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section class="form-section" aria-labelledby="form-title">
+      <div class="container">
+        <h2 class="visually-hidden" id="form-title">Formulario de solicitud de presupuesto</h2>
+
+        <!-- Mensaje de éxito (oculto por defecto) -->
+        <div class="form-success" id="formSuccess" hidden role="alert" aria-live="assertive">
+          <span class="form-success__icon" aria-hidden="true">✓</span>
+          <h3>¡Formulario enviado con éxito!</h3>
+          <p>Nos pondremos en contacto contigo en menos de 24 horas.</p>
+        </div>
+
+        <div class="budget-form" id="budgetForm">
+
+          <!-- PARTE 1: DATOS DE CONTACTO -->
+          <fieldset class="form-group">
+            <legend class="form-group__title">
+              <span class="form-group__num" aria-hidden="true">01</span>
+              Datos de contacto
+            </legend>
+
+            <div class="form-row">
+
+              <div class="form-field">
+                <label class="form-label" for="nombre">
+                  Nombre <span class="form-label__req" aria-hidden="true">*</span>
+                  <span class="sr-only">(obligatorio)</span>
+                </label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Escribe tu nombre"
+                  maxlength="15"
+                  autocomplete="given-name"
+                  aria-describedby="nombre-error"
+                  aria-required="true"
+                >
+                <span class="form-error" id="nombre-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="apellidos">
+                  Apellidos <span class="form-label__req" aria-hidden="true">*</span>
+                  <span class="sr-only">(obligatorio)</span>
+                </label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="apellidos"
+                  name="apellidos"
+                  placeholder="Escribe tus apellidos"
+                  maxlength="40"
+                  autocomplete="family-name"
+                  aria-describedby="apellidos-error"
+                  aria-required="true"
+                >
+                <span class="form-error" id="apellidos-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="telefono">
+                  Teléfono de contacto <span class="form-label__req" aria-hidden="true">*</span>
+                  <span class="sr-only">(obligatorio)</span>
+                </label>
+                <input
+                  class="form-input"
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="Máx. 9 dígitos"
+                  maxlength="9"
+                  autocomplete="tel"
+                  aria-describedby="telefono-error"
+                  aria-required="true"
+                >
+                <span class="form-error" id="telefono-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="email">
+                  Correo electrónico <span class="form-label__req" aria-hidden="true">*</span>
+                  <span class="sr-only">(obligatorio)</span>
+                </label>
+                <input
+                  class="form-input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="ejemplo@correo.com"
+                  autocomplete="email"
+                  aria-describedby="email-error"
+                  aria-required="true"
+                >
+                <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
+              </div>
+
+            </div>
+          </fieldset>
+
+          <!-- PARTE 2: PRESUPUESTO -->
+          <fieldset class="form-group">
+            <legend class="form-group__title">
+              <span class="form-group__num" aria-hidden="true">02</span>
+              Configurar presupuesto
+            </legend>
+
+            <!-- Producto -->
+            <div class="form-field">
+              <label class="form-label" for="producto">
+                Elige un producto <span class="form-label__req" aria-hidden="true">*</span>
+                <span class="sr-only">(obligatorio)</span>
+              </label>
+              <select
+                class="form-input form-select"
+                id="producto"
+                name="producto"
+                aria-describedby="producto-hint"
+                aria-required="true"
+              >
+                <option value="">— Selecciona una opción —</option>
+                <option value="landing" data-price="800">Landing Page — 800 €</option>
+                <option value="corporativa" data-price="2000">Web Corporativa — 2.000 €</option>
+                <option value="ecommerce" data-price="4500">Tienda Online — 4.500 €</option>
+                <option value="webapp" data-price="8000">Aplicación Web — 8.000 €</option>
+              </select>
+              <span class="form-hint" id="producto-hint">El precio base varía según el producto elegido.</span>
+            </div>
+
+            <!-- Plazo -->
+            <div class="form-field">
+              <label class="form-label" for="plazo">
+                Plazo de entrega (meses)
+                <span class="form-label__req" aria-hidden="true">*</span>
+                <span class="sr-only">(obligatorio)</span>
+              </label>
+              <div class="plazo-wrap">
+                <input
+                  class="form-input form-number"
+                  type="number"
+                  id="plazo"
+                  name="plazo"
+                  min="1"
+                  max="24"
+                  placeholder="1–24"
+                  aria-describedby="plazo-hint plazo-error"
+                  aria-required="true"
+                >
+                <span class="plazo-badge" id="plazoBadge" aria-live="polite"></span>
+              </div>
+              <span class="form-hint" id="plazo-hint">
+                1–3 meses: +20% (urgente) · 4–6 meses: precio base · 7+ meses: −10% (descuento)
+              </span>
+              <span class="form-error" id="plazo-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <!-- Extras -->
+            <fieldset class="form-field extras-group">
+              <legend class="form-label">Extras opcionales</legend>
+              <div class="extras-grid">
+
+                <label class="extra-option">
+                  <input type="checkbox" name="extras" value="seo" data-price="400" class="extra-check">
+                  <span class="extra-box">
+                    <span class="extra-icon" aria-hidden="true">◈</span>
+                    <span class="extra-name">SEO Avanzado</span>
+                    <span class="extra-price">+ 400 €</span>
+                  </span>
+                </label>
+
+                <label class="extra-option">
+                  <input type="checkbox" name="extras" value="mantenimiento" data-price="600" class="extra-check">
+                  <span class="extra-box">
+                    <span class="extra-icon" aria-hidden="true">◉</span>
+                    <span class="extra-name">Mantenimiento anual</span>
+                    <span class="extra-price">+ 600 €</span>
+                  </span>
+                </label>
+
+                <label class="extra-option">
+                  <input type="checkbox" name="extras" value="analytics" data-price="250" class="extra-check">
+                  <span class="extra-box">
+                    <span class="extra-icon" aria-hidden="true">◇</span>
+                    <span class="extra-name">Panel de Analytics</span>
+                    <span class="extra-price">+ 250 €</span>
+                  </span>
+                </label>
+
+                <label class="extra-option">
+                  <input type="checkbox" name="extras" value="multiidioma" data-price="700" class="extra-check">
+                  <span class="extra-box">
+                    <span class="extra-icon" aria-hidden="true">▣</span>
+                    <span class="extra-name">Versión multiidioma</span>
+                    <span class="extra-price">+ 700 €</span>
+                  </span>
+                </label>
+
+                <label class="extra-option">
+                  <input type="checkbox" name="extras" value="chatbot" data-price="900" class="extra-check">
+                  <span class="extra-box">
+                    <span class="extra-icon" aria-hidden="true">◆</span>
+                    <span class="extra-name">Chatbot con IA</span>
+                    <span class="extra-price">+ 900 €</span>
+                  </span>
+                </label>
+
+                <label class="extra-option">
+                  <input type="checkbox" name="extras" value="motion" data-price="500" class="extra-check">
+                  <span class="extra-box">
+                    <span class="extra-icon" aria-hidden="true">⬡</span>
+                    <span class="extra-name">Motion Design</span>
+                    <span class="extra-price">+ 500 €</span>
+                  </span>
+                </label>
+
+              </div>
+            </fieldset>
+
+            <!-- Presupuesto estimado (se actualiza en tiempo real) -->
+            <div class="budget-display" aria-live="polite" aria-atomic="true">
+              <div class="budget-display__label">Presupuesto estimado</div>
+              <div class="budget-display__amount" id="budgetAmount">0 €</div>
+              <div class="budget-display__breakdown" id="budgetBreakdown"></div>
+            </div>
+
+          </fieldset>
+
+          <!-- PARTE 3: CONDICIONES Y ENVÍO -->
+          <fieldset class="form-group form-group--submit">
+            <legend class="form-group__title">
+              <span class="form-group__num" aria-hidden="true">03</span>
+              Aceptación y envío
+            </legend>
+
+            <div class="privacy-check">
+              <label class="checkbox-label" for="privacidad">
+                <input
+                  type="checkbox"
+                  id="privacidad"
+                  name="privacidad"
+                  aria-describedby="privacidad-error"
+                  aria-required="true"
+                >
+                <span class="checkbox-custom" aria-hidden="true"></span>
+                He leído y acepto la
+                <a href="#" class="privacy-link">política de privacidad</a>
+                <span class="form-label__req" aria-hidden="true">*</span>
+              </label>
+              <span class="form-error" id="privacidad-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-primary" id="submitBtn">
+                Enviar presupuesto ↗
+              </button>
+              <button type="button" class="btn btn-outline" id="resetBtn">
+                Resetear formulario
+              </button>
+            </div>
+
+          </fieldset>
+
+        </div><!-- /budget-form -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand-name">PIXELCREW</p>
+        <p class="footer__tagline">Diseño web que transforma marcas.</p>
+        <nav class="footer__social" aria-label="Redes sociales">
+          <a href="#" aria-label="Instagram de PIXELCREW" title="Instagram">&#x1F4F7;</a>
+          <a href="#" aria-label="LinkedIn de PIXELCREW" title="LinkedIn">&#x1F517;</a>
+          <a href="#" aria-label="Twitter/X de PIXELCREW" title="X">&#x1D54F;</a>
+          <a href="#" aria-label="Behance de PIXELCREW" title="Behance">&#x24B7;</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__heading">Ubicación</p>
+        <address class="footer__address">
+            ZONA FRANCA , Calle nr 3,<br>
+          08038 Barcelona, España<br><br>
+          <a href="tel:+34987654321">+34 987 654 321</a><br>
+          <a href="mailto:hola@pixelcrew.es">hola@pixelcrew.es</a>
+        </address>
+      </div>
+      <div>
+        <p class="footer__heading">Navegación</p>
+        <ul class="footer__links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="presupuesto.html">Presupuesto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 PIXELCREW. Todos los derechos reservados.</p>
+      <p class="footer__legal">
+        <a href="#">Aviso legal</a> · <a href="#">Política de privacidad</a> · <a href="#">Cookies</a>
+      </p>
+    </div>
+  </footer>
+<!-- SCRIPTS -->
+  <script src="../js/navbar.js"></script>
+  <script src="../js/presupuesto.js"></script>
+</body>
+</html>

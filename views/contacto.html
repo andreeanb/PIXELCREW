@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta con PIXELCREW - Agencia de Diseño Web en Barcelona. Encuéntranos en el mapa y calcula tu ruta.">
+  <title>Contacto | PIXELCREW</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/contacto.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="../index.html" class="navbar__logo" aria-label="PIXELCREW Inicio">PIXEL<span>CREW</span></a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar__nav" id="navMenu">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="presupuesto.html">Presupuesto</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- CABECERA -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="section-label">Hablemos</p>
+        <h1 class="page-hero__title" id="page-title">Dónde<br><span>Encontrarnos</span></h1>
+        <p class="page-hero__sub">Estamos en Barcelona. Visítanos o escríbenos y te respondemos en menos de 24 horas.</p>
+      </div>
+    </section>
+
+    <!-- DATOS + MAPA -->
+    <section class="contact-section">
+      <div class="container">
+        <h2 class="visually-hidden">Info de Contacto y Ubicación</h2>
+
+        <div class="contact-grid">
+
+          <!-- Info de contacto -->
+          <aside class="contact-info">
+            <h2 class="contact-info__title">PIXELCREW</h2>
+
+            <dl class="contact-details">
+
+              <div class="contact-details__item">
+                <dt>
+                  <span aria-hidden="true" class="contact-details__icon">◈</span>
+                  Dirección
+                </dt>
+                <dd>
+                  <address>
+                    ZONA FRANCA, Calle nr 3,<br>
+                    08038 Barcelona, España
+                  </address>
+                </dd>
+              </div>
+
+              <div class="contact-details__item">
+                <dt>
+                  <span aria-hidden="true" class="contact-details__icon">◉</span>
+                  Teléfono
+                </dt>
+                <dd><a href="tel:+34987654321">+34987654321</a></dd>
+              </div>
+
+              <div class="contact-details__item">
+                <dt>
+                  <span aria-hidden="true" class="contact-details__icon">◇</span>
+                  Email
+                </dt>
+                <dd><a href="mailto:hola@pixelcrew.es">hola@pixelcrew.es</a></dd>
+              </div>
+
+              <div class="contact-details__item">
+                <dt>
+                  <span aria-hidden="true" class="contact-details__icon">▣</span>
+                  Horario
+                </dt>
+                <dd>
+                  Lunes – Viernes: 9:00 – 18:00<br>
+                  Sábado – Domingo: Cerrado
+                </dd>
+              </div>
+
+            </dl>
+
+            <!-- Redes sociales -->
+            <nav class="contact-social" aria-label="Redes sociales de PIXELCREW">
+              <p class="contact-social__label">Síguenos</p>
+              <div class="contact-social__links">
+                <a href="#" aria-label="Instagram de PIXELCREW" title="Instagram">&#x1F4F7;</a>
+                <a href="#" aria-label="LinkedIn de PIXELCREW" title="LinkedIn">&#x1F517;</a>
+                <a href="#" aria-label="Twitter/X de PIXELCREW" title="Twitter/X">&#x1D54F;</a>
+                <a href="#" aria-label="Behance de PIXELCREW" title="Behance">&#x24B7;</a>
+              </div>
+            </nav>
+
+          </aside>
+
+          <!-- Mapa -->
+          <div class="map-wrap">
+
+            <!-- Herramienta de ruta -->
+            <div class="route-tool">
+              <label class="route-tool__label" for="userAddress">
+                Calcular ruta desde tu ubicación
+              </label>
+              <div class="route-tool__row">
+                <input
+                  type="text"
+                  id="userAddress"
+                  class="route-tool__input"
+                  placeholder="Tu dirección, ciudad o código postal"
+                  aria-describedby="route-hint"
+                >
+                <!-- Selector de modo de transporte -->
+                <select id="mode" class="route-tool__input" style="max-width:130px;" aria-label="Modo de transporte">
+                  <option value="driving">🚗 Coche</option>
+                  <option value="walking">🚶 A pie</option>
+                  <option value="cycling">🚴 Bici</option>
+                </select>
+                <button class="btn btn-primary route-tool__btn" id="routeBtn" type="button">
+                  Calcular ↗
+                </button>
+              </div>
+              <!-- Botón geolocalización (requerido por contacto.js) -->
+              <div style="margin-top: 10px;">
+                <button class="btn btn-outline" id="use-location" type="button">
+                  📍 Usar mi ubicación
+                </button>
+              </div>
+              <p class="route-tool__hint" id="route-hint" aria-live="polite"></p>
+            </div>
+
+            <!-- Mapa OpenStreetMap con Leaflet -->
+            <div
+              id="map"
+              class="map"
+              role="application"
+              aria-label="Mapa interactivo con la ubicación de PIXELCREW en Barcelona, España"
+            ></div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand-name">PIXELCREW</p>
+        <p class="footer__tagline">Diseño web que transforma marcas.</p>
+        <nav class="footer__social" aria-label="Redes sociales">
+          <a href="#" aria-label="Instagram de PIXELCREW" title="Instagram">&#x1F4F7;</a>
+          <a href="#" aria-label="LinkedIn de PIXELCREW" title="LinkedIn">&#x1F517;</a>
+          <a href="#" aria-label="Twitter/X de PIXELCREW" title="X">&#x1D54F;</a>
+          <a href="#" aria-label="Behance de PIXELCREW" title="Behance">&#x24B7;</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__heading">Ubicación</p>
+        <address class="footer__address">
+          ZONA FRANCA, Calle nr 3,<br>
+          08038 Barcelona, España<br><br>
+          <a href="tel:+34987654321">+34987654321</a><br>
+          <a href="mailto:hola@pixelcrew.es">hola@pixelcrew.es</a>
+        </address>
+      </div>
+      <div>
+        <p class="footer__heading">Navegación</p>
+        <ul class="footer__links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="presupuesto.html">Presupuesto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 PIXELCREW. Todos los derechos reservados.</p>
+      <p class="footer__legal">
+        <a href="#">Aviso legal</a> · <a href="#">Política de privacidad</a> · <a href="#">Cookies</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/contacto.js"></script>
+</body>
+</html>

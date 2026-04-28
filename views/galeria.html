@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galería de proyectos de PIXELCREW - Agencia de Diseño Web. Conoce nuestro trabajo.">
+  <title>Galería | PIXELCREW</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/galeria.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="../index.html" class="navbar__logo" aria-label="PIXELCREW Inicio">PIXEL<span>CREW</span></a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar__nav" id="navMenu">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html" class="active">Galería</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="presupuesto.html">Presupuesto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- CABECERA -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="section-label">Portfolio</p>
+        <h1 class="page-hero__title" id="page-title">Nuestros<br><span>Proyectos</span></h1>
+        <p class="page-hero__sub">Una selección de los trabajos que más nos enorgullecen. Cada proyecto es una historia única.</p>
+      </div>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="gallery-section" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 class="visually-hidden" id="gallery-title">Galería de proyectos</h2>
+
+        <fieldset class="gallery-filters">
+          <legend class="visually-hidden">Filtrar proyectos por categoría</legend>
+          <button class="gallery-filter active" data-filter="all">Todos</button>
+          <button class="gallery-filter" data-filter="web">Diseño Web</button>
+          <button class="gallery-filter" data-filter="branding">Branding</button>
+          <button class="gallery-filter" data-filter="ecommerce">E-Commerce</button>
+          <button class="gallery-filter" data-filter="app">App / UX</button>
+        </fieldset>
+
+        <!-- GRID DE GALERÍA -->
+        <ul class="gallery-grid" id="galleryGrid">
+
+          <li class="gallery-item" data-category="web">
+            <div class="gallery-item__img-wrap">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Proyecto web para empresa de finanzas FinFlow" class="gallery-item__img" loading="lazy">
+              <div class="gallery-item__overlay" aria-hidden="true">
+                <span class="gallery-item__zoom">&#x2B;</span>
+              </div>
+            </div>
+            <div class="gallery-item__info">
+              <span class="gallery-item__cat">Diseño Web</span>
+              <h3 class="gallery-item__title">FinFlow — Plataforma Financiera</h3>
+            </div>
+          </li>
+
+          <li class="gallery-item" data-category="branding">
+            <div class="gallery-item__img-wrap">
+              <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80" alt="Identidad visual para la marca de moda NORR" class="gallery-item__img" loading="lazy">
+              <div class="gallery-item__overlay" aria-hidden="true">
+                <span class="gallery-item__zoom">&#x2B;</span>
+              </div>
+            </div>
+            <div class="gallery-item__info">
+              <span class="gallery-item__cat">Branding</span>
+              <h3 class="gallery-item__title">NORR — Identidad de Marca</h3>
+            </div>
+          </li>
+
+          <li class="gallery-item" data-category="ecommerce">
+            <div class="gallery-item__img-wrap">
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="Tienda online para la firma de lujo Aurore" class="gallery-item__img" loading="lazy">
+              <div class="gallery-item__overlay" aria-hidden="true">
+                <span class="gallery-item__zoom">&#x2B;</span>
+              </div>
+            </div>
+            <div class="gallery-item__info">
+              <span class="gallery-item__cat">E-Commerce</span>
+              <h3 class="gallery-item__title">Aurore — Tienda de Lujo Online</h3>
+            </div>
+          </li>
+
+          <li class="gallery-item" data-category="app">
+            <div class="gallery-item__img-wrap">
+              <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80" alt="Diseño UX para la aplicación de salud Vitals" class="gallery-item__img" loading="lazy">
+              <div class="gallery-item__overlay" aria-hidden="true">
+                <span class="gallery-item__zoom">&#x2B;</span>
+              </div>
+            </div>
+            <div class="gallery-item__info">
+              <span class="gallery-item__cat">App / UX</span>
+              <h3 class="gallery-item__title">Vitals — App de Salud</h3>
+            </div>
+          </li>
+
+          <li class="gallery-item" data-category="web">
+            <div class="gallery-item__img-wrap">
+              <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80" alt="Web corporativa para estudio de arquitectura Forma" class="gallery-item__img" loading="lazy">
+              <div class="gallery-item__overlay" aria-hidden="true">
+                <span class="gallery-item__zoom">&#x2B;</span>
+              </div>
+            </div>
+            <div class="gallery-item__info">
+              <span class="gallery-item__cat">Diseño Web</span>
+              <h3 class="gallery-item__title">Forma Studio — Web Corporativa</h3>
+            </div>
+          </li>
+
+          <li class="gallery-item" data-category="branding">
+            <div class="gallery-item__img-wrap">
+              <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80" alt="Rediseño de marca para startup tecnológica TechSeed" class="gallery-item__img" loading="lazy">
+              <div class="gallery-item__overlay" aria-hidden="true">
+                <span class="gallery-item__zoom">&#x2B;</span>
+              </div>
+            </div>
+            <div class="gallery-item__info">
+              <span class="gallery-item__cat">Branding</span>
+              <h3 class="gallery-item__title">TechSeed — Rebrand Startup</h3>
+            </div>
+          </li>
+
+          <li class="gallery-item" data-category="ecommerce">
+            <div class="gallery-item__img-wrap">
+              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Tienda online para la empresa de mobiliario Woodsen" class="gallery-item__img" loading="lazy">
+              <div class="gallery-item__overlay" aria-hidden="true">
+                <span class="gallery-item__zoom">&#x2B;</span>
+              </div>
+            </div>
+            <div class="gallery-item__info">
+              <span class="gallery-item__cat">E-Commerce</span>
+              <h3 class="gallery-item__title">Woodsen — Mobiliario Online</h3>
+            </div>
+          </li>
+
+          <li class="gallery-item" data-category="app">
+            <div class="gallery-item__img-wrap">
+              <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80" alt="Diseño de aplicación de gestión de proyectos Taskly" class="gallery-item__img" loading="lazy">
+              <div class="gallery-item__overlay" aria-hidden="true">
+                <span class="gallery-item__zoom">&#x2B;</span>
+              </div>
+            </div>
+            <div class="gallery-item__info">
+              <span class="gallery-item__cat">App / UX</span>
+              <h3 class="gallery-item__title">Taskly — Gestión de Proyectos</h3>
+            </div>
+          </li>
+
+          <li class="gallery-item" data-category="web">
+            <div class="gallery-item__img-wrap">
+              <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80" alt="Portal educativo interactivo para plataforma LearnUp" class="gallery-item__img" loading="lazy">
+              <div class="gallery-item__overlay" aria-hidden="true">
+                <span class="gallery-item__zoom">&#x2B;</span>
+              </div>
+            </div>
+            <div class="gallery-item__info">
+              <span class="gallery-item__cat">Diseño Web</span>
+              <h3 class="gallery-item__title">LearnUp — Portal Educativo</h3>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <dialog class="lightbox" id="lightbox" aria-modal="true" aria-label="Vista ampliada de imagen" hidden>
+      <div class="lightbox__backdrop" id="lightboxBackdrop"></div>
+      <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar vista ampliada">✕</button>
+      <button class="lightbox__prev" id="lightboxPrev" aria-label="Imagen anterior">&#8249;</button>
+      <button class="lightbox__next" id="lightboxNext" aria-label="Imagen siguiente">&#8250;</button>
+        <img class="lightbox__img" id="lightboxImg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Vista ampliada del proyecto seleccionado">
+    </dialog>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand-name">PIXELCREW</p>
+        <p class="footer__tagline">Diseño web que transforma marcas.</p>
+        <nav class="footer__social" aria-label="Redes sociales">
+          <a href="#" aria-label="Instagram de PIXELCREW" title="Instagram">&#x1F4F7;</a>
+          <a href="#" aria-label="LinkedIn de PIXELCREW" title="LinkedIn">&#x1F517;</a>
+          <a href="#" aria-label="Twitter/X de PIXELCREW" title="X">&#x1D54F;</a>
+          <a href="#" aria-label="Behance de PIXELCREW" title="Behance">&#x24B7;</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__heading">Ubicación</p>
+        <address class="footer__address">
+          ZONA FRANCA, Calle nr 3,<br>
+          08038 Barcelona, España<br><br>
+          <a href="tel:+34987654321">+34987654321</a><br>
+          <a href="mailto:hola@pixelcrew.es">hola@pixelcrew.es</a>
+        </address>
+      </div>
+      <div>
+        <p class="footer__heading">Navegación</p>
+        <ul class="footer__links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="presupuesto.html">Presupuesto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 PIXELCREW. Todos los derechos reservados.</p>
+      <p class="footer__legal">
+        <a href="#">Aviso legal</a> · <a href="#">Política de privacidad</a> · <a href="#">Cookies</a>
+      </p>
+    </div>
+  </footer>
+<!-- SCRIPTS -->
+  <script src="../js/navbar.js"></script>
+  <script src="../js/galeria.js"></script>
+</body>
+</html>
